@@ -8,11 +8,14 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter: 400, 700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter: 100,200,300,400,500,600,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="navigation.css" />
     <link rel="stylesheet" href="welcome.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="projects.css" />
     <title>Document</title>
   </head>
   <body>
@@ -39,29 +42,153 @@
       </div>
     </nav>
 
-    <section class="headliner">
-      <div class="main-headline">
-        <div id="welcome-large">
-          👋 I’m Ryan Schachte. <br />I’m a
-          <span class="u-blue">software engineer</span> <br />&
-          <span class="u-blue">online educator</span>.
+    <div class="main-container">
+      <section class="headliner-container">
+        <div class="main-headline">
+          <div id="welcome-large">
+            👋 I’m Ryan Schachte. <br />I’m a
+            <span class="u-blue">software engineer</span> <br />&
+            <span class="u-blue">online educator</span>.
+          </div>
+          <div id="welcome-small">
+            Welcome to my digital oasis 🌵— Feel free to browse around my posts
+            and videos. You can also find me on websites like
+            <span class="u-orange">Strava</span> for my athletic things,
+            <span class="u-dark-blue">LinkedIn</span> for my business things and
+            <span class="u-red">Youtube</span> for my educational things.
+          </div>
+          <div id="welcome-links">
+            <button>📬 Join Newsletter</button>
+            <button>📹 Subscribe Youtube</button>
+          </div>
         </div>
-        <div id="welcome-small">
-          Welcome to my digital oasis 🌵— Feel free to browse around my posts
-          and videos. You can also find me on websites like
-          <span class="u-orange">Strava</span> for my athletic things,
-          <span class="u-dark-blue">LinkedIn</span> for my business things and
-          <span class="u-red">Youtube</span> for my educational things.
+        <div class="image-headline">
+          <div class="image-offset"></div>
+          <img src="https://i.imgur.com/kV52EC9.png" />
         </div>
-        <div id="welcome-links">
-          <button>📬 Join Newsletter</button>
-          <button>📹 Subscribe Youtube</button>
+      </section>
+
+      <section class="blog-container">
+        <div class="section-headline">
+          <div class="section-header">Latest Musings</div>
+          <div class="section-links">
+            <span class="blog-link">All Posts</span>
+            <span class="blog-link">Articles</span>
+            <span class="blog-link">Videos</span>
+          </div>
         </div>
-      </div>
-      <div class="image-headline">
-        <div class="image-offset"></div>
-        <img src="https://i.imgur.com/kV52EC9.png" />
-      </div>
-    </section>
+        <div class="blog-posts">
+          <div class="post">
+            <div class="post-title">
+              <span class="posting-date">September 20th, 2020</span>
+              <span class="posting-title">Leetcode, FAANG & Mental Health</span>
+            </div>
+            <div class="post-tags">
+              <span class="tag post-tag-purple">Health</span>
+              <span class="tag post-tag-green">Algorithms</span>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-title">
+              <span class="posting-date">September 20th, 2020</span>
+              <span class="posting-title"
+                >Creating Real-Time Avro to ORC Converter</span
+              >
+            </div>
+            <div class="post-tags">
+              <span class="tag post-tag-purple">Health</span>
+              <span class="tag post-tag-green">Algorithms</span>
+              <span class="tag post-tag-orange">Java</span>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-title">
+              <span class="posting-date">September 20th, 2020</span>
+              <span class="posting-title"
+                >Introduction To Database Indexes</span
+              >
+            </div>
+            <div class="post-tags">
+              <span class="tag post-tag-green">Algorithms</span>
+              <span class="tag post-tag-red">Databases</span>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-title">
+              <span class="posting-date">September 20th, 2020</span>
+              <span class="posting-title">The Sliding Window Technique</span>
+            </div>
+            <div class="post-tags">
+              <span class="tag post-tag-orange">Java</span>
+              <span class="tag post-tag-green">Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-container">
+        <div class="section-headline">
+          <div class="section-header">Projects</div>
+          <span class="project-header-link">View My Github</span>
+        </div>
+        <div class="projects-section">
+          <div class="project">
+            <div class="project-title">📉 VizMock</div>
+            <div class="project-description">
+              A Kafka data mocking tool for quickly simulating production data.
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-title">💽 MemDoop</div>
+            <div class="project-description">
+              An extension to the Hadoop file system to support in-memory
+              writes.
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-title">👨‍💻️ Algo.js</div>
+            <div class="project-description">
+              A react-based search algorithm visualization tool.
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-title">🧜 MermRender</div>
+            <div class="project-description">
+              An REST-based UML diagram rendering tool for easy embeds.
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-title">🍦 WIPCream</div>
+            <div class="project-description">
+              Simple rule-based engine for maintaining quality git repositories.
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-title">🧼 Simplex Lang</div>
+            <div class="project-description">
+              Toy-based, custom language implementation that runs on the JVM.
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-title">🤓 HackASM</div>
+            <div class="project-description">
+              Custom assembler that converts Hack architecture assembly to
+              binary.
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="contact-links">
+          <a href="#">Blog</a>
+          <a href="#">Youtube</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Patreon</a>
+          <a href="#">Donate</a>
+        </div>
+        <div class="copyleft">🄯 Ryan Schachte 2020</div>
+      </footer>
+    </div>
   </body>
 </html>
