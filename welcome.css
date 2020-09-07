@@ -1,0 +1,117 @@
+.headliner {
+  display: flex;
+  height: 550px;
+  width: 75%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+/** Welcome Container */
+.main-headline {
+  display: flex;
+  width: 66.6%;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+/** Welcome Headline */
+#welcome-large {
+  font-family: "Inter", sans-serif;
+  font-size: 2.4rem;
+  max-width: 500px;
+  font-weight: 700;
+  color: #343232;
+}
+
+/** Small Description Headline */
+#welcome-small {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 600px;
+  color: #343232;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  line-height: 35px;
+  padding-right: 100px;
+}
+
+/** Links */
+#welcome-links {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  max-width: 600px;
+}
+
+#welcome-links button {
+  background-color: #aae8ff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  font-size: 1rem;
+}
+
+#welcome-links button:nth-child(2) {
+  background-color: #aae8ff;
+  border: none;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+#welcome-links button:hover {
+  background-color: #3d768b;
+  color: white;
+}
+
+/** Welcome Profile Photo */
+.image-headline {
+  width: 33.3%;
+  max-height: 450px;
+  position: relative;
+}
+
+.image-offset {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  max-height: 80%;
+  background-color: #aae8ff;
+  margin-left: -20px;
+  margin-top: -10px;
+}
+
+.image-headline > img {
+  position: relative;
+  max-width: 100%;
+  min-height: 250px;
+  margin-top: 10px;
+}
+
+.u-blue {
+  box-shadow: inset 0 -12px 0 0 #b4e7f8;
+}
+
+.u-red {
+  box-shadow: inset 0 -7px 0 0 #ff8080;
+}
+
+.u-red:hover {
+  box-shadow: inset 0 -20px 0 0 #ff8080;
+}
+
+.u-dark-blue {
+  box-shadow: inset 0 -7px 0 0 #80bfff;
+}
+
+.u-dark-blue:hover {
+  box-shadow: inset 0 -20px 0 0 #80bfff;
+}
+
+.u-orange {
+  box-shadow: inset 0 -7px 0 0 #ffb580;
+}
+
+.u-orange:hover {
+  box-shadow: inset 0 -20px 0 0 #ffb580;
+}
