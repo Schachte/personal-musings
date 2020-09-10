@@ -14,13 +14,25 @@
   flex-direction: column;
 }
 
+/** Main styles */
+.u-main {
+  box-shadow: inset 0 -7px 0 0 var(--main-summary);
+  color: var(--main-font-color);
+  transition: 0.3s;
+}
+
+.u-main:hover {
+  box-shadow: inset 0 -20px 0 0 var(--main-summary);
+  color: var(--main-font-color);
+}
+
 /** Welcome Headline */
 #welcome-large {
   font-family: "Inter", sans-serif;
   font-size: 2.4rem;
   max-width: 500px;
-  font-weight: 700;
-  color: #343232;
+  font-weight: 600;
+  color: var(--main-font-color);
 }
 
 /** Small Description Headline */
@@ -29,7 +41,7 @@
   font-size: 1.1rem;
   font-weight: 400;
   max-width: 600px;
-  color: #343232;
+  color: var(--main-font-color);
   margin-top: 35px;
   margin-bottom: 35px;
   line-height: 35px;
@@ -44,7 +56,7 @@
 }
 
 #welcome-links button {
-  background-color: #aae8ff;
+  background-color: var(--main-accent-color);
   border: none;
   border-radius: 10px;
   padding: 10px 15px 10px 15px;
@@ -53,7 +65,7 @@
 }
 
 #welcome-links button:nth-child(2) {
-  background-color: #aae8ff;
+  background-color: var(--main-accent-color);
   border: none;
   border-radius: 10px;
   margin-left: 30px;
@@ -84,7 +96,7 @@
 
 .image-offset {
   position: absolute;
-  background-color: #aae8ff;
+  background-color: var(--main-accent-color);
   margin-left: -20px;
   margin-top: -10px;
 }
@@ -95,6 +107,9 @@
   min-height: 250px;
   margin-top: 10px;
   height: auto;
+  -webkit-box-shadow: -22px -23px 0px -5px var(--shadow-color);
+  -moz-box-shadow: -22px -23px 0px -5px var(--shadow-color);
+  box-shadow: -22px -23px 0px -5px var(--shadow-color);
 }
 
 .u-blue {
@@ -130,4 +145,54 @@
 .u-orange:hover {
   box-shadow: inset 0 -20px 0 0 #ffb580;
   color: white;
+}
+
+@media (max-width: 920px) {
+  .image-headline {
+    display: none;
+  }
+
+  /** Welcome Container */
+  .main-headline {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+  }
+
+  /** Welcome Headline */
+  #welcome-large {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: var(--main-font-color);
+    align-self: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+    font-size: 1.6em;
+  }
+
+  /** Small Description Headline */
+  #welcome-small {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 100%;
+    color: var(--main-font-color);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    line-height: 35px;
+    padding-right: 25px;
+    padding-left: 25px;
+    align-self: center;
+  }
+
+  /** Links */
+  #welcome-links {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    max-width: 600px;
+    align-self: center;
+    padding: 10px;
+  }
 }

@@ -1,29 +1,28 @@
-/** Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /** Parent Containers */
 
 nav {
   width: 100%;
   height: 4.5em;
-  border-bottom: 1px solid #b1aeae;
-  background-color: #f7f7f7;
+  border-bottom: 1px solid var(--nav-border);
+  background-color: var(--nav-background);
 }
 
 #nav-search-container {
   display: flex;
   max-width: 1200px;
   height: 100%;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+  background-color: var(--nav-background);
 }
 
 /** Navigation Icon Images */
+#nav-color-scheme {
+  color: var(--main-font-color);
+  padding: 10px;
+  font-size: 1.2em;
+}
 
 #nav-color-scheme > img {
   width: 20px;
@@ -31,14 +30,7 @@ nav {
   opacity: 0.9;
 }
 
-#search-hamburger > img {
-  width: 20px;
-  margin-right: 20px;
-  opacity: 0.7;
-}
-
 /** Main Text Search Area */
-
 #nav-main-search {
   display: flex;
   border: 1px solid #d4d2d2;
@@ -66,4 +58,29 @@ nav {
 
 #nav-main-search input[type="text"]:focus {
   outline: none;
+}
+
+.theme-change {
+  transition: 0.2s;
+  fill: var(--main-font-color);
+}
+
+.theme-change:hover {
+  fill: var(--moon-hover);
+}
+
+.search-result {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-main {
+  display: flex;
 }

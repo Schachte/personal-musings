@@ -1,0 +1,81 @@
+[data-theme="light"] {
+  /** global colors */
+  --main-font-color: #343232;
+  --main-accent-color: #aae8ff;
+  --main-summary: var(--main-accent-color);
+
+  /** navigation */
+  --nav-border: #b1aeae;
+  --nav-background: #f7f7f7;
+
+  /** main color schemes */
+  --section-headline-border: #d4d4d4;
+  --section-headline-font-color: var(--main-font-color);
+  --shadow-color: rgba(170, 232, 255, 1);
+
+  /** blog posts */
+  --post-font-color: #343232;
+  --post-hover-color: #f1fcff;
+
+  /** blog links */
+  --blog-link-background-color: #f5f5f5;
+  --blog-link-font-color: #454545;
+
+  --blog-link-background-color-hover: #424242;
+  --blog-link-font-color-hover: #fff;
+
+  --scroll: linear-gradient(
+    180deg,
+    rgba(240, 239, 255, 1) 0%,
+    rgba(170, 232, 255, 1) 62%,
+    rgba(194, 244, 255, 1) 100%
+  );
+
+  --scroll-bg: white;
+  --scroll-border: #ededed;
+
+  --moon-hover: #eeeeee;
+
+  transition: 0.5s;
+}
+
+[data-theme="dark"] {
+  transition: 0.5s;
+  /** global colors */
+  background-color: #232931;
+  --main-font-color: #eeeeee;
+  --main-accent-color: #4ecca3;
+  --main-summary: var(--main-accent-color);
+
+  /** navigation */
+  --nav-border: #535353;
+  --nav-background: #393e46;
+
+  /** main color schemes */
+  --section-headline-border: #646464;
+  --section-headline-font-color: var(--main-font-color);
+  --shadow-color: #4ecca3;
+
+  /** blog posts */
+  --post-font-color: #eeeeee;
+  --post-font-hover-color: #232931;
+  --post-hover-color: #f1fcff;
+
+  /** blog links */
+  --blog-link-background-color: #f5f5f5;
+  --blog-link-font-color: #454545;
+
+  --blog-link-background-color-hover: #424242;
+  --blog-link-font-color-hover: #fff;
+
+  --scroll: linear-gradient(
+    180deg,
+    rgba(240, 239, 255, 0.105) 0%,
+    rgba(78, 204, 163, 1) 62%,
+    rgba(52, 50, 50, 1) 100%
+  );
+
+  --scroll-bg: #232931;
+  --scroll-border: #424242;
+  --moon-hover: #232931;
+}

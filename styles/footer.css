@@ -1,0 +1,66 @@
+.main-footer {
+  width: 100%;
+  align-self: center;
+  max-width: 900px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+}
+
+.contact-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.contact-links > a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: var(--main-font-color);
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+}
+
+.contact-links > a:hover {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: var(--main-font-color);
+  background-color: var(--nav-background);
+  padding: 10px 20px 10px 20px;
+}
+
+.contact-links > a:visited {
+  font-family: "Inter", sans-serif;
+  color: var(--main-font-color);
+}
+
+.copyleft {
+  color: #cacaca;
+}
+
+@media (max-width: 600px) {
+  .main-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 900px;
+    margin-top: 50px;
+    font-family: "Inter", sans-serif;
+    justify-content: space-evenly;
+    height: 200px;
+    white-space: nowrap;
+  }
+
+  .contact-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 4vw;
+  }
+}
