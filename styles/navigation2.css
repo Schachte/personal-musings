@@ -12,7 +12,6 @@ nav {
   width: 80%;
   height: auto;
   margin: 0 auto;
-  position: relative;
 }
 
 .search-container {
@@ -50,9 +49,11 @@ nav {
 }
 
 .search-results {
+  font-size: 0.8em;
   display: flex;
+  align-self: center;
   flex-direction: column;
-  width: 98%;
+  width: 90%;
   height: auto;
   border-radius: 0px;
   border-color: #b7b5b5;
