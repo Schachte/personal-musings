@@ -6,7 +6,7 @@
 }
 
 body::-webkit-scrollbar {
-  width: 1.5em;
+  width: 1.2em;
 }
 
 body::-webkit-scrollbar-track {
@@ -111,18 +111,13 @@ body::-webkit-scrollbar-thumb {
   transform: scaleY(1);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 930px) {
   .section-headline {
     flex-direction: column;
     padding-bottom: 15px;
   }
 
-  body::-webkit-scrollbar {
-    width: 0.5em;
-  }
-
   body::-webkit-scrollbar-track {
-    width: 0.55em;
     background-color: var(--scroll-bg);
     border-left: 1px solid var(--scroll-border);
   }

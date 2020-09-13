@@ -9,6 +9,11 @@
   align-items: center;
   justify-content: space-evenly;
   height: 200px;
+  text-align: center;
+}
+
+.heart {
+  color: pink;
 }
 
 .contact-links {
@@ -48,12 +53,10 @@
     display: flex;
     flex-direction: column;
     align-self: center;
-    max-width: 900px;
     margin-top: 50px;
     font-family: "Inter", sans-serif;
     justify-content: space-evenly;
     height: 200px;
-    white-space: nowrap;
   }
 
   .contact-links {

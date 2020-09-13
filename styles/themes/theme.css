@@ -1,4 +1,5 @@
 [data-theme="light"] {
+  transition: 0.5s;
   /** global colors */
   --main-font-color: #343232;
   --main-accent-color: #aae8ff;
@@ -33,10 +34,7 @@
 
   --scroll-bg: white;
   --scroll-border: #ededed;
-
-  --moon-hover: #eeeeee;
-
-  transition: 0.5s;
+  --invert-hover-color: #ededed;
 }
 
 [data-theme="dark"] {
@@ -77,5 +75,5 @@
 
   --scroll-bg: #232931;
   --scroll-border: #424242;
-  --moon-hover: #232931;
+  --invert-hover-color: #232931;
 }

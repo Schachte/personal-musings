@@ -147,7 +147,7 @@
   color: white;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 935px) {
   .image-headline {
     display: none;
   }

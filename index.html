@@ -8,13 +8,12 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter: 100,200,300,400,500,600,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/themes/theme.css" />
     <link rel="stylesheet" href="styles/main.css" />
-    <!-- <link rel="stylesheet" href="styles/navigation.css" /> -->
-    <link rel="stylesheet" href="styles/navigation2.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
     <link rel="stylesheet" href="styles/welcome.css" />
     <link rel="stylesheet" href="styles/blog.css" />
     <link rel="stylesheet" href="styles/projects.css" />
@@ -53,22 +52,53 @@
       </ul>
     </div>
 
-    <nav>
-      <div class="nav-container">
-        <div class="search-container">
-          <div class="search-box">
-            <ion-icon name="search-outline" class="search-icon"></ion-icon>
-            <input type="text" placeholder="Search articles & videos here" />
+    <header>
+      <div class="header-overlay"></div>
+      <nav>
+        <div class="inner-nav-container">
+          <div class="hamburger-container" onclick="toggle_menu_close()">
+            <svg viewBox="0 0 100 80" width="20" height="20">
+              <rect width="100" height="20"></rect>
+              <rect y="30" width="100" height="20"></rect>
+              <rect y="60" width="100" height="20"></rect>
+            </svg>
           </div>
-          <div class="search-results">
-            <div class="search-result">Result 1</div>
-            <div class="search-result">Result 2</div>
-            <div class="search-result">Result 3</div>
+          <div class="search-container">
+            <div class="search-results">
+              <div class="input-container search-large">
+                <ion-icon name="search-outline" id="search-icon"></ion-icon>
+                <input type="text" placeholder="Search articles and videos" />
+              </div>
+              <div class="input-container search-small">
+                <ion-icon name="search-outline" id="search-icon"></ion-icon>
+                <input type="text" placeholder="Search Articles & Videos" />
+              </div>
+              <a href="#" class="result-link">Result 1</a>
+              <a href="#" class="result-link">Result 1</a>
+              <a href="#" class="result-link">Result 1</a>
+              <a href="#" class="result-link">Result 1</a>
+              <a href="#" class="result-link">Result 1</a>
+              <a href="#" class="result-link">Result 1</a>
+              <a href="#" class="result-link">Result 1</a>
+              <a href="#" class="result-link">Result 1</a>
+            </div>
+          </div>
+          <div class="links-container">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Youtube</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="moon-container">
+            <ion-icon
+              name="moon-outline"
+              class="moon"
+              onclick="toggle_light_mode()"
+            ></ion-icon>
           </div>
         </div>
-        <div class="links-container"></div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <div class="main-container">
       <section class="headliner-container">
@@ -92,7 +122,7 @@
         </div>
         <div class="image-headline">
           <div class="image-offset"></div>
-          <img src="https://i.imgur.com/2FunJxI.png" />
+          <img src="https://i.ibb.co/sPkxyKf/test.png" />
         </div>
       </section>
 
@@ -215,7 +245,11 @@
           <a href="#">Patreon</a>
           <a href="#">Donate</a>
         </div>
-        <div class="copyleft">🄯 Ryan Schachte 2020</div>
+        <div class="copyleft">
+          🄯 Ryan Schachte 2020 - Theme Designed With
+          <ion-icon name="heart-outline" class="heart"></ion-icon> by Ryan
+          Schachte In Phoenix, Arizona 🌵
+        </div>
       </footer>
     </div>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
