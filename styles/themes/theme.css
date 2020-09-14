@@ -3,7 +3,7 @@
   /** global colors */
   --main-font-color: #343232;
   --main-accent-color: #aae8ff;
-  --main-accent-color-rgba-opaque: rgba(170, 232, 255, 0.2);
+  --main-accent-color-rgba-opaque: #d5f4ff;
   --main-summary: var(--main-accent-color);
 
   --shade-1: #99d1e6;
@@ -48,7 +48,7 @@
   background-color: #232931;
   --main-font-color: #eeeeee;
   --main-accent-color: #4ecca3;
-  --main-accent-color-rgba-opaque: rgba(78, 204, 163, 0.2);
+  --main-accent-color-rgba-opaque: #caf0e3;
   --main-summary: var(--main-accent-color);
 
   /** navigation */
