@@ -63,7 +63,7 @@
   font-size: 0.8em;
 }
 
-@media (max-width: 925px) {
+@media (max-width: 935px) {
   .projects-container {
     padding-right: 20px;
     padding-left: 20px;

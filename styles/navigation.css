@@ -8,6 +8,8 @@ nav {
   border-bottom: 1px solid var(--nav-border);
   font-family: "Nunito";
   align-items: center;
+  position: fixed;
+  z-index: 1000;
 }
 
 .search-results a {
@@ -32,15 +34,17 @@ nav {
 }
 
 .result-link:hover {
-  background-color: #eefaff;
+  background-color: var(--main-accent-color-rgba-opaque);
+  font-style: italic;
+  box-shadow: inset 0px -5px var(--main-accent-color);
 }
 
 .result-link:hover:last-child {
-  background-color: #eefaff;
+  background-color: var(--main-accent-color-rgba-opaque);
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  border-bottom-right-radius: 8;
-  border-bottom-left-radius: 8;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .input-container {
@@ -67,7 +71,7 @@ nav {
 .search-results {
   position: absolute;
   right: 0;
-  top: -15px;
+  top: -18px;
   width: 100%;
   border: 1px solid #b7b5b577;
   border-radius: 4px;
@@ -132,21 +136,17 @@ select:focus {
 
 .links-container a {
   text-decoration: none;
-  padding-left: 10px;
+  padding-left: 5px;
   color: var(--main-font-color);
-  box-shadow: inset 0px -5px var(--main-accent-color);
-  margin-right: 10px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .links-container > a:hover {
-  box-shadow: inset 0px -5px var(--main-accent-color);
-  padding-left: 2px;
+  box-shadow: inset 0px -7px var(--main-accent-color);
 }
 
 .links-container > a:visited:hover {
-  box-shadow: inset 0px -5px var(--main-accent-color);
-  padding-left: 5px;
+  box-shadow: inset 0px -7px var(--main-accent-color);
 }
 
 .links-container a:visited {
@@ -175,9 +175,10 @@ select:focus {
 
 .moon:hover {
   color: var(--invert-hover-color);
+  text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 935px) {
   .links-container {
     display: none;
   }

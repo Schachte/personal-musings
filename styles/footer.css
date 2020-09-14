@@ -44,7 +44,14 @@
 }
 
 .copyleft {
+  display: flex;
   color: #cacaca;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.copyleft span {
+  width: 100%;
 }
 
 @media (max-width: 600px) {
