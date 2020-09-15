@@ -3,6 +3,7 @@ nav {
   background-color: var(--nav-background);
   width: 100%;
   justify-content: center;
+  height: 100px;
   display: flex;
   column-gap: 40px;
   border-bottom: 1px solid var(--nav-border);

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schachte's Blog</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/icons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/themes/theme.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/blog.css" />
+    <link rel="stylesheet" href="styles/post.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <script>
+      window.onload = function (e) {
+        load_theme();
+      };
+      function load_theme() {
+        var app = document.getElementsByTagName("BODY")[0];
+        var theme = localStorage.schachteTheme;
+        app.setAttribute("data-theme", theme === undefined ? "light" : theme);
+      }
+
+      function toggle_menu_close() {
+        window.scrollTo(0, 0);
+        var element = document.getElementsByClassName("overlay")[0];
+        element.classList.toggle("collapsed");
+      }
+    </script>
+    <title>Document</title>
+  </head>
+
+  <body data-theme="light">
+    <header>
+      <div class="header-overlay"></div>
+      <nav>
+        <div class="inner-nav-container">
+          <div class="hamburger-container" onclick="toggle_menu_close()">
+            <svg viewBox="0 0 100 80" width="20" height="20">
+              <rect width="100" height="20"></rect>
+              <rect y="30" width="100" height="20"></rect>
+              <rect y="60" width="100" height="20"></rect>
+            </svg>
+          </div>
+          <div class="search-container">
+            <div class="search-results">
+              <div class="input-container search-large">
+                <ion-icon name="search-outline" id="search-icon"></ion-icon>
+                <input type="text" placeholder="Search articles and videos" />
+              </div>
+              <div class="input-container search-small">
+                <ion-icon name="search-outline" id="search-icon"></ion-icon>
+                <input type="text" placeholder="Search Articles & Videos" />
+              </div>
+              <!-- <a href="#" class="result-link">Result 1</a> -->
+            </div>
+          </div>
+          <div class="links-container">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Youtube</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="moon-container">
+            <ion-icon
+              name="moon-outline"
+              class="moon"
+              onclick="toggle_light_mode()"
+            ></ion-icon>
+          </div>
+        </div>
+
+        <!-- Main Search/Navigation Section-->
+        <div class="overlay">
+          <ul>
+            <li>Home.</li>
+            <li>Youtube.</li>
+            <li>Blog.</li>
+            <li>LinkedIn.</li>
+            <li>Twitter.</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-container">
+      <div class="blog-title-container">
+        <span>Database Indexes Explained</span>
+      </div>
+
+      <div class="blog-post-heading">
+        <div class="toc-wrapper">
+          <div class="table-of-contents">
+            <span class="toc-header">Contents</span>
+            <ul>
+              <li><a href="#">Understanding Indexes</a></li>
+              <li><a href="#">Query Parse Engines</a></li>
+              <li><a href="#">Optimal Performance Tuning</a></li>
+              <li><a href="#">How To Index</a></li>
+              <li><a href="#">Closing Remarks</a></li>
+            </ul>
+          </div>
+        </div>
+        <img
+          src="https://i.ibb.co/hyppXrG/Screen-Shot-2020-09-14-at-10-02-43-PM.png"
+        />
+      </div>
+      <footer class="main-footer">
+        <div class="contact-links">
+          <a href="#">Blog</a>
+          <a href="#">Youtube</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Patreon</a>
+          <a href="#">Donate</a>
+        </div>
+        <div class="copyleft">
+          <span>🄯 Ryan Schachte 2020 </span>
+          <span
+            >Theme Designed With
+            <ion-icon name="heart-outline" class="heart"></ion-icon> by Ryan
+            Schachte In Phoenix, Arizona 🌵</span
+          >
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script>
+      function toggle_light_mode() {
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.schachteTheme == "dark") {
+          localStorage.schachteTheme = "light";
+          app.setAttribute("data-theme", "light");
+        } else {
+          localStorage.schachteTheme = "dark";
+          app.setAttribute("data-theme", "dark");
+        }
+      }
+    </script>
+  </body>
+</html>

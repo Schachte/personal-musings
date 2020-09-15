@@ -1,0 +1,102 @@
+.blog-title-container {
+  width: 95%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  color: var(--main-font-color);
+  align-items: flex-end;
+  font-family: "Inter";
+  font-size: 3em;
+  font-weight: 600;
+  border-bottom: 1px solid #cad1d3;
+  text-align: center;
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+.toc-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.blog-post-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.table-of-contents:before {
+  content: "";
+  position: absolute;
+  top: calc(var(--base-grid) * -2);
+  left: calc(var(--base-grid) * -2);
+  border: 2px dashed var(--card-container-border);
+  height: 100%;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    -24deg,
+    transparent,
+    transparent 4px,
+    var(--main-accent-color) 0,
+    var(--main-accent-color) 5px
+  );
+  z-index: -1;
+}
+.table-of-contents {
+  padding-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  display: block;
+  width: 80%;
+  background-color: var(--table-of-contents-bg);
+  text-align: center;
+  align-items: center;
+  -webkit-box-shadow: 10px 10px 39px -16px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 10px 10px 39px -16px rgba(0, 0, 0, 0.61);
+  box-shadow: 10px 10px 39px -16px rgba(0, 0, 0, 0.61);
+}
+
+.table-of-contents ul {
+  font-family: "Inter";
+  list-style: none;
+  padding-top: 15px;
+}
+
+.table-of-contents li a {
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.table-of-contents li:hover {
+  font-style: italic;
+  padding-left: 10px;
+  box-shadow: inset 0px -5px var(--main-accent-color);
+}
+
+.table-of-contents li {
+  padding: 20px;
+}
+
+.table-of-contents li a {
+  color: var(--main-font-color);
+}
+
+.toc-header {
+  color: var(--main-font-color);
+  font-size: 2em;
+  font-family: "Inter";
+  font-weight: 600;
+  width: 80%;
+  border-bottom: 1px solid #cad1d3;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.blog-post-heading img {
+  width: 50%;
+  align-self: flex-start;
+}
