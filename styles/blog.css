@@ -85,33 +85,6 @@
   flex-wrap: wrap;
 }
 
-.tag {
-  border-radius: 15px;
-  padding: 5px 15px 5px 15px;
-  font-size: 0.7em;
-  margin: 15px 5px 0px 5px;
-}
-
-.post-tag-purple {
-  background-color: #e0e0ff;
-  color: #121212;
-}
-
-.post-tag-green {
-  background-color: #e2ffe0;
-  color: #484a48;
-}
-
-.post-tag-orange {
-  background-color: #fff9e0;
-  color: #d1a900;
-}
-
-.post-tag-red {
-  background-color: #ffe0e0;
-  color: #484a48;
-}
-
 @media (max-width: 600px) {
   .blog-link {
     padding: 10px 25px 10px 25px;

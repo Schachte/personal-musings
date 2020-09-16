@@ -6,6 +6,7 @@
   --colour-text: #1a1a1a;
   --card-footer-color: #3d768b;
   --card-container-border: #707070;
+  --background-color: #fff;
 
   transition: 0.5s;
   /** global colors */
@@ -66,6 +67,7 @@
   transition: 0.5s;
   /** global colors */
   background-color: #232931;
+  --background-color: #232931;
   --main-font-color: #eeeeee;
   --main-accent-color: #4ecca3;
   --main-accent-color-rgba-opaque: #caf0e3;

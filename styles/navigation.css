@@ -1,3 +1,7 @@
+header {
+  height: 100px;
+}
+
 nav {
   padding: 30px;
   background-color: var(--nav-background);
@@ -68,7 +72,7 @@ nav {
   padding: 10px;
   width: 98%;
   font-style: italic;
-  background-color: var(--background-color);
+  background-color: var(--nav-background);
   color: var(--main-font-color);
 }
 
