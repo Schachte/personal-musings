@@ -1,0 +1,201 @@
+.headliner-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  align-self: center;
+  padding-top: 50px;
+}
+
+/** Welcome Container */
+.main-headline {
+  display: flex;
+  width: 66.6%;
+  flex-direction: column;
+}
+
+/** Main styles */
+.u-main {
+  box-shadow: inset 0 -12px 0 0 var(--main-summary);
+  color: var(--main-font-color);
+  transition: 0.3s;
+}
+
+.u-main:hover {
+  box-shadow: none;
+  color: var(--main-font-color);
+  font: italic bold Georgia, Serif;
+  text-shadow: -4px 3px 0 var(--main-accent-color);
+  cursor: pointer;
+}
+
+/** Welcome Headline */
+#welcome-large {
+  font-family: "Inter", sans-serif;
+  font-size: 2.4rem;
+  max-width: 500px;
+  font-weight: 600;
+  color: var(--main-font-color);
+}
+
+/** Small Description Headline */
+#welcome-small {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 600px;
+  color: var(--main-font-color);
+  margin-top: 35px;
+  margin-bottom: 35px;
+  line-height: 35px;
+  padding-right: 100px;
+}
+
+/** Links */
+#welcome-links {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  max-width: 600px;
+}
+
+#welcome-links button {
+  background-color: var(--main-accent-color);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+#welcome-links button:nth-child(2) {
+  background-color: var(--main-accent-color);
+  border: none;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+#welcome-links button:nth-child(2):hover {
+  background-color: #ff8080;
+  border: none;
+  border-radius: 10px;
+  margin-left: 30px;
+  color: white;
+}
+
+#welcome-links button:hover {
+  background-color: #f1fcff;
+  color: grey;
+  -webkit-box-shadow: 13px 10px 93px 0px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 13px 10px 93px 0px rgba(0, 0, 0, 0.31);
+  box-shadow: 13px 10px 93px 0px rgba(0, 0, 0, 0.31);
+}
+
+/** Welcome Profile Photo */
+.image-headline {
+  width: 33.3%;
+  position: relative;
+  display: inline-block;
+}
+
+.image-offset {
+  position: absolute;
+  background-color: var(--main-accent-color);
+  margin-left: -20px;
+  margin-top: -10px;
+}
+
+.image-headline > img {
+  position: relative;
+  max-width: 100%;
+  min-height: 250px;
+  margin-top: 10px;
+  height: auto;
+  -webkit-box-shadow: -22px -23px 0px -5px var(--shadow-color);
+  -moz-box-shadow: -22px -23px 0px -5px var(--shadow-color);
+  box-shadow: -22px -23px 0px -5px var(--shadow-color);
+}
+
+.u-blue {
+  box-shadow: inset 0 -12px 0 0 #b4e7f8;
+  transition: 0.2s;
+}
+
+.u-red {
+  box-shadow: inset 0 -7px 0 0 #ff8080;
+  transition: 0.2s;
+}
+
+.u-red:hover {
+  box-shadow: inset 0 -20px 0 0 #ff8080;
+  color: white;
+}
+
+.u-dark-blue {
+  box-shadow: inset 0 -7px 0 0 #80bfff;
+  transition: 0.2s;
+}
+
+.u-dark-blue:hover {
+  box-shadow: inset 0 -20px 0 0 #80bfff;
+  color: white;
+}
+
+.u-orange {
+  box-shadow: inset 0 -7px 0 0 #ffb580;
+  transition: 0.2s;
+}
+
+.u-orange:hover {
+  box-shadow: inset 0 -20px 0 0 #ffb580;
+  color: white;
+}
+
+@media (max-width: 935px) {
+  .image-headline {
+    display: none;
+  }
+
+  /** Welcome Container */
+  .main-headline {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+  }
+
+  /** Welcome Headline */
+  #welcome-large {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: var(--main-font-color);
+    align-self: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+    font-size: 1.6em;
+  }
+
+  /** Small Description Headline */
+  #welcome-small {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 100%;
+    color: var(--main-font-color);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    line-height: 35px;
+    padding-right: 25px;
+    padding-left: 25px;
+    align-self: center;
+  }
+
+  /** Links */
+  #welcome-links {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    max-width: 600px;
+    align-self: center;
+    padding: 10px;
+  }
+}

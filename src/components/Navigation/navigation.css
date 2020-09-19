@@ -1,0 +1,239 @@
+header {
+  height: 100px;
+}
+
+nav {
+  padding: 30px;
+  background-color: var(--nav-background);
+  width: 100%;
+  justify-content: center;
+  height: 100px;
+  display: flex;
+  column-gap: 40px;
+  border-bottom: 1px solid var(--nav-border);
+  font-family: "Nunito";
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+.search-results a {
+  text-decoration: none;
+  padding: 10 20px;
+  font-size: 0.8em;
+}
+
+.search-results a:visited {
+  text-decoration: none;
+}
+
+.result-link a:first-child {
+  padding: 10px;
+  border-top: 1px solid #686868;
+}
+
+.result-link {
+  padding: 10px;
+  transition: 0.3s;
+  color: var(--main-font-color);
+  width: 100%;
+  height: 100%;
+}
+
+.result-link:hover {
+  box-shadow: inset 0px -5px var(--main-accent-color);
+  background-color: var(--main-accent-color-rgba-opaque);
+  color: var(--blog-link-background-color-hover);
+}
+
+.result-link:hover:last-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 20;
+  border-bottom-left-radius: 20;
+}
+
+.input-container {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  align-self: flex-start;
+  padding-left: 20px;
+}
+
+.search-container {
+  z-index: 1;
+  position: relative;
+  flex-basis: 40%;
+}
+
+.search-container input {
+  border: none;
+  padding: 10px;
+  width: 98%;
+  font-style: italic;
+  background-color: var(--nav-background);
+  color: var(--main-font-color);
+}
+
+.search-container input::placeholder {
+  color: var(--main-font-color);
+}
+
+.search-results {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  width: 100%;
+  border: 1px solid #b7b5b577;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  column-gap: 20px;
+  z-index: 1;
+  -webkit-box-shadow: 7px 7px 0px -2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 7px 7px 0px -2px rgba(0, 0, 0, 0.15);
+  box-shadow: 7px 7px 0px -2px rgba(0, 0, 0, 0.15);
+}
+
+.search-container a,
+.search-container p {
+  background-color: var(--background-color);
+  background-color: var(--nav-background);
+}
+
+.search-container a:not(:last-child),
+.search-container p {
+  border-bottom: 1px solid #b7b5b577;
+}
+
+.search-container a:first-of-type {
+  border-top: 1px solid #b7b5b577;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.search-container a,
+.search-container p {
+  height: 100%;
+  color: var(--main-font-color);
+  text-align: center;
+  width: 100%;
+}
+
+#search-icon {
+  color: darkgrey;
+}
+.inner-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 925px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.links-container {
+  font-family: "Inter";
+  font-weight: 600;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  align-items: center;
+}
+
+.links-container a {
+  text-decoration: none;
+  padding-left: 5px;
+  color: var(--main-font-color);
+  transition: 0.5s;
+}
+
+.links-container > a:hover {
+  box-shadow: inset 0px -7px var(--main-accent-color);
+}
+
+.links-container > a:visited:hover {
+  box-shadow: inset 0px -7px var(--main-accent-color);
+}
+
+.links-container a:visited {
+  color: var(--main-font-color);
+}
+
+.search-small {
+  display: none;
+}
+
+.hamburger-container {
+  display: none;
+  fill: var(--main-font-color);
+  transition: 0.2s;
+}
+
+.hamburger-container:hover {
+  fill: var(--invert-hover-color);
+}
+
+.moon-container {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.moon {
+  fill: var(--main-font-color);
+  transition: 0.1s;
+  height: 100%;
+  width: 100%;
+}
+
+.moon:hover {
+  fill: var(--invert-hover-color);
+  text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
+  cursor: pointer;
+}
+
+@media (max-width: 935px) {
+  .links-container {
+    display: none;
+  }
+
+  .moon-container {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .search-large {
+    display: none;
+  }
+
+  .search-small {
+    display: inherit;
+  }
+
+  .hamburger-container {
+    padding-right: 20px;
+    display: inherit;
+  }
+
+  .moon {
+    font-size: 1.6em;
+    padding-left: 20px;
+  }
+
+  .search-container {
+    flex-basis: 100%;
+  }
+}
