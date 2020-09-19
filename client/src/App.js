@@ -23,7 +23,7 @@ function RootWrapper({children}) {
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navigation/>
       <RootWrapper>
           <Headline imgLink={'https://i.ibb.co/z5Gqz0Q/Screen-Shot-2020-09-14-at-11-04-31-AM.png'} />
@@ -33,12 +33,7 @@ function App() {
                     <LinkPill pillTitle={"Articles"}/>
                     <LinkPill pillTitle={"Videos"}/>
                 </SectionHeader>
-                <PostContainer>
-                  <Post title={"Leetcode, FAANG & Mental Health"} date={"September 25th, 2020"}/>
-                  <Post title={"Creating Real-Time Avro to ORC Converter"} date={"September 25th, 2020"}/>
-                  <Post title={"Introduction To Database Indexes"} date={"September 25th, 2020"}/>
-                  <Post title={"The Sliding Window Technique"} date={"September 25th, 2020"}/>
-                </PostContainer>
+                <PostContainer/>
             </BlogContainer>
             <ProjectsContainer />
             <Footer/>
