@@ -1,17 +1,12 @@
 import React from 'react';
 import '../src/styles/themes/theme.css'
-import "./App.css"
-
-import BlogContainer from './components/Blog/BlogContainer'
-import PostContainer from './components/Blog/PostContainer'
-import ProjectsContainer from './components/Projects/ProjectsContainer'
-
-import Headline from './components/Headline/Headline'
+import './App.css'
 import Navigation from './components/Navigation/Navigation'
-import SectionHeader from './components/Common/SectionHeader'
-import Post from './components/Blog/Post'
 import Footer from './components/Footer/Footer'
-import LinkPill from './components/Common/LinkPill'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './pages/home'
+import Contact from './pages/contact'
+import Post from './pages/post'
 
 function RootWrapper({children}) {
   return (
@@ -24,20 +19,17 @@ function RootWrapper({children}) {
 function App() {
   return (
     <div>
-      <Navigation/>
-      <RootWrapper>
-          <Headline imgLink={'https://i.ibb.co/z5Gqz0Q/Screen-Shot-2020-09-14-at-11-04-31-AM.png'} />
-            <BlogContainer>
-                <SectionHeader sectionHeader={"Latest Musings"}>
-                    <LinkPill pillTitle={"Posts"}/>
-                    <LinkPill pillTitle={"Articles"}/>
-                    <LinkPill pillTitle={"Videos"}/>
-                </SectionHeader>
-                <PostContainer/>
-            </BlogContainer>
-            <ProjectsContainer />
-            <Footer/>
+      <Router>
+        <Navigation/>
+        <RootWrapper>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/post/:slug" component={Post} />
+          </Switch>
+          <Footer/>
         </RootWrapper>
+      </Router>
     </div>
   );
 }

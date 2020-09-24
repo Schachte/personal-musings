@@ -1,9 +1,7 @@
 .blog-title-container {
   width: 95%;
   display: flex;
-  justify-content: flex-end;
   color: var(--main-font-color);
-  align-items: flex-end;
   font-weight: 600;
   text-align: center;
   padding-bottom: 10px;
@@ -35,8 +33,11 @@
   font-family: "Inter";
   display: flex;
   width: 100%;
-  /* justify-content: center; */
   padding-bottom: 20px;
+}
+
+.blog-post-tags {
+  justify-content: center;
 }
 
 .heading-metacontent {

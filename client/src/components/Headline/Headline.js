@@ -1,7 +1,8 @@
 import React from 'react';
 import "./welcome.css" 
+import logo from './profile.png'
 
-function Headline({imgLink}) {
+function Headline() {
   return (
         <section className="headliner-container">
           <div className="main-headline">
@@ -21,7 +22,7 @@ function Headline({imgLink}) {
           <div className="image-headline">
             <div className="image-offset"></div>
             <img
-              src={imgLink}
+              src={logo}
             />
           </div>
         </section>
