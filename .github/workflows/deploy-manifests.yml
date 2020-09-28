@@ -13,4 +13,5 @@ jobs:
       - uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITAL_OCEAN_ACCESS_TOKEN }}
+      - run: doctl kubernetes cluster kubeconfig save ryan-schachte-personal
       - run: kubectl apply -f infra/k8s --recursive && kubectl apply -f infra/k8s-production --recursive
