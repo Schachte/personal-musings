@@ -1,7 +1,7 @@
-# Ryan Schachte's Blog 
+<div align="center"><h3>Ryan Schachte's Blog & Tech Playground</h3></div>
 
 ### Statuses
-| Service | Status |  Description
+| Service | Deployment Statuses |  Description
 |--|--| --|
 | Posts  | ![deploy-posts](https://github.com/Schachte/personal-musings/workflows/deploy-posts/badge.svg?branch=master)| Handles all functionality relevant to the blog side of things
 | Comments  | ![deploy-posts](https://github.com/Schachte/personal-musings/workflows/deploy-posts/badge.svg?branch=master)| Comment management, moderation and rate limiting
