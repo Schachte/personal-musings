@@ -21,4 +21,4 @@ jobs:
         with:
           token: ${{ secrets.DIGITAL_OCEAN_ACCESS_TOKEN }}
       - run: doctl kubernetes cluster kubeconfig save ryan-schachte-personal
-      - run: kubectl rollout restart deployment posts
+      - run: kubectl rollout restart deployment posts-depl
