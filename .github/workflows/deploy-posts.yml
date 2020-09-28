@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd server/Posts && docker build -t schachte1/Posts .
+      - run: cd server/Posts && docker build -t schachte1/posts .
       - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }} 
-      - run: docker push schachte1/Posts
+      - run: docker push schachte1/posts
