@@ -3,8 +3,8 @@ kind: Config
 deploy:
   kubectl:
     manifests:
-      - ./infra/k8s/dev/*.yml
-      - ./infra/k8s/*.yml
+      - ./infra/k8s/*
+      - ./infra/k8s-development/*
 build:
   local:
     push: false
@@ -27,14 +27,6 @@ build:
             dest: .
     - image: schachte1/comments
       context: server/Comments
-      docker:
-        dockerfile: Dockerfile
-      sync:
-        manual:
-          - src: "*.js"
-            dest: .
-    - image: schachte1/event-bus
-      context: server/Event-Bus
       docker:
         dockerfile: Dockerfile
       sync:
