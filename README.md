@@ -1,4 +1,4 @@
-<div align="center"><h3>Ryan Schachte's Blog & Tech Playground</h3></div>
+<div align="center"><h2>Ryan Schachte's Blog & Tech Playground</h2></div>
 
 ### Statuses
 | Service | Deployment Statuses |  Description
