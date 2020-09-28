@@ -33,4 +33,4 @@ doctl compute domain create dev.ryan-schachte.com
 # Install Nginx Ingress
 k apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.35.0/deploy/static/provider/do/deploy.yaml
 
-# Install Postgres DB (WARNING: DEFAULTS)
+

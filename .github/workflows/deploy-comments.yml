@@ -1,0 +1,24 @@
+name: deploy-comments
+
+on: 
+  push:
+    branches: master
+    paths:
+      - 'server/Comments/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd server/Comments && docker build -t schachte1/comments .
+      - run: docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+        env:
+          DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }} 
+      - run: docker push schachte1/comments
+      - uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITAL_OCEAN_ACCESS_TOKEN }}
+      - run: doctl kubernetes cluster kubeconfig save ryan-schachte-personal
+      - run: kubectl rollout restart deployment comments
