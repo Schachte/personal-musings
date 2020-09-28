@@ -1,4 +1,5 @@
-# Ryan Schachte's Blog 
+# Ryan Schachte's Personal Musings
+### Blog, Portfolio & Technical Playground
 
 ### Statuses
 | Service | Status |
