@@ -1,11 +1,10 @@
 import React from 'react';
 import PostContainer from '../components/Post/PostContainer'
 
-function Post({match}) {
-    const slugName = match.params.slug
+function Post(props) {
     return (
       <div>
-          <PostContainer title={slugName} />
+          <PostContainer title={"hi"} />
       </div>
     );
   }
