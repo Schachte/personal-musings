@@ -32,16 +32,6 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <script>
-      window.onload = function (e) {
-        load_theme();
-      };
-      function load_theme() {
-        var app = document.getElementsByTagName("BODY")[0];
-        var theme = localStorage.schachteTheme;
-        app.setAttribute("data-theme", theme === undefined ? "light" : theme);
-      }
-    </script>
   </head>
 
   <body data-theme="light">
