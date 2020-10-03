@@ -1,4 +1,5 @@
 # Ryans SSL Setup Explained 
+### See k8s-production/Issuer.yml
 
 The SSL used is issued via the Lets Encrypt CA. The management is automatically managed via cert-manager and supports 90-day
 automatic renewals for the cluster. 
