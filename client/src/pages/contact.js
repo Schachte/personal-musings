@@ -3,7 +3,7 @@ import PostContainer from '../components/Post/PostContainer'
 function Contact() {
     return (
       <div>
-          <PostContainer></PostContainer>
+          <PostContainer/>
       </div>
     );
   }

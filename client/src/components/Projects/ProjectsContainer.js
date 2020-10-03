@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard'
-import "./projects.css" 
+import "./projects.module.css" 
 
 function ProjectsContainer() {
   return (

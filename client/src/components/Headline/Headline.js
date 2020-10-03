@@ -1,29 +1,30 @@
 import React from 'react';
-import "./welcome.css" 
-import logo from './profile.png'
+import "./welcome.module.css" 
+// import logo from './profile.png'
 
+const Photo = () => {
+  return <img src="/images/me.png" alt="my image" />
+}
 function Headline() {
   return (
-        <section className="headliner-container">
-          <div className="main-headline">
-            <div id="welcome-large">
-              👋 I’m Ryan Schachte. <br />I’m a <span className="u-main">software engineer</span> <br /> & <span className="u-main">online educator</span>.
+        <section className='headliner-container'>
+          <div className={'main-headline'}>
+            <div id={'welcome-large'}>
+              👋 I’m Ryan Schachte. <br />I’m a <span className={'u-main'}>software engineer</span> <br /> & <span className={'u-main'}>online educator</span>.
             </div>
-            <div id="welcome-small">
+            <div id={"welcome-small"}>
               Welcome to my digital oasis 🌵— Feel free to browse around my
-              posts and videos. You can also find me on websites like <span className="u-orange">Strava</span> for my athletic things, <span className="u-dark-blue">LinkedIn</span> for my business things
-              and <span className="u-red">Youtube</span> for my educational things.
+              posts and videos. You can also find me on websites like <span className="u-orange">Strava</span> for my athletic things, <span className={"u-dark-blue"}>LinkedIn</span> for my business things
+              and <span className={"u-red"}>Youtube</span> for my educational things.
             </div>
-            <div id="welcome-links">
+            <div id={"welcome-links"}>
               <button>📬 Join Newsletter</button>
               <button>📹 Subscribe Youtube</button>
             </div>
           </div>
-          <div className="image-headline">
-            <div className="image-offset"></div>
-            <img
-              src={logo}
-            />
+          <div className={"image-headline"}>
+            <div className={"image-offset"}></div>
+            {<Photo/>}
           </div>
         </section>
     );

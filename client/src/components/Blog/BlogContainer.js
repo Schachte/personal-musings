@@ -1,4 +1,3 @@
-import React from 'react';
 import '../Common/tags.css'
 import './blog.css'
 import './post.css'

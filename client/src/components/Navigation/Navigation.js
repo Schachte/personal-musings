@@ -2,7 +2,7 @@ import React from 'react';
 import "../../App.css"
 import './navigation.css'
 import IosMoonOutlineJS from 'react-ionicons/lib/IosMoonOutline'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 function toggle_light_mode() {
   let app = document.getElementsByTagName("BODY")[0];
@@ -47,13 +47,13 @@ function Navigation() {
               </div>
             </div>
             <div className="links-container">
-              <Link to="/">
+              <Link href="/">
                 Home
               </Link>
               <a href="#">Blog</a>
               <a href="https://youtube.com/thesimpleengineer" target="_blank">Youtube</a>
               <a href="#">About</a>
-              <Link to="/contact">
+              <Link href="/contact">
                 Contact
               </Link>
             </div>
