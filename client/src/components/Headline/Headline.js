@@ -1,9 +1,8 @@
 import React from 'react';
 import "./welcome.module.css" 
-// import logo from './profile.png'
 
 const Photo = () => {
-  return <img src="/images/me.png" alt="my image" />
+  return <img src="/images/compressed-profile.png" alt="my image" />
 }
 function Headline() {
   return (
