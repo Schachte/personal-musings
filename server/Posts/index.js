@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const { randomBytes } = require('crypto');
 const cors = require('cors');
 const axios = require('axios');
+const { Client } = require('pg');
 
 const app = express();
 app.use(bodyParser.json());
@@ -11,9 +12,27 @@ app.use(cors());
 var PORT = process.env.port || 4000
 const posts = {};
 
-// TODO: Hook up communication to postgresql here
 app.get('/posts', (req, res) => {
-  res.send({'data': PORT + 400});
+  const client = new Client({
+    user: 'schachte',
+    host: 'postgres',
+    database: 'schachte-blog',
+    password: 'password',
+    port: 5432,
+  });
+
+  client.connect();
+
+  const query = `
+        CREATE table testesjeogeiog(
+            email varchar,
+            firstName varchar,
+            lastName varchar,
+            age int
+        );
+    `;
+
+  return {}
 });
 
 app.post('/posts/create', async (req, res) => {

@@ -3,7 +3,8 @@ on:
   push:
     branches: master
     paths:
-      - 'infra/**'
+      - 'infra/k8s/_*/**'
+      - 'infra/k8s/k8s-production/**'
 
 jobs:
   build:

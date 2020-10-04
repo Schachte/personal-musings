@@ -17,9 +17,15 @@ spec:
           image: dpage/pgadmin4
           env:
            - name: PGADMIN_DEFAULT_EMAIL
-             value: "admin@google.com"
+             valueFrom:
+               secretKeyRef:
+                 name: pgusername
+                 key: pguser
            - name: PGADMIN_DEFAULT_PASSWORD
-             value: "password"
+             valueFrom:
+               secretKeyRef:
+                 name: pgpassword
+                 key: pgpass
            - name: PGADMIN_PORT
              value: "80"
           ports:
