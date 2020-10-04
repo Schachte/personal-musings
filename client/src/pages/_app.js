@@ -1,6 +1,7 @@
 import '../styles/themes/theme.css'
 import '../App.css'
 import { useEffect } from 'react'
+import { Head } from 'next/document'
 
 import Navigation from '../components/Navigation/Navigation'
 import Footer from '../components/Footer/Footer'

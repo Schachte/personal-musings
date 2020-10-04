@@ -19,13 +19,13 @@ spec:
            - name: PGADMIN_DEFAULT_EMAIL
              valueFrom:
                secretKeyRef:
-                 name: pgusername
-                 key: pguser
+                 name: un
+                 key: un
            - name: PGADMIN_DEFAULT_PASSWORD
              valueFrom:
                secretKeyRef:
-                 name: pgpassword
-                 key: pgpass
+                 name: pw 
+                 key: pw
            - name: PGADMIN_PORT
              value: "80"
           ports:
@@ -43,5 +43,5 @@ spec:
     ports:
         - name: pgadmin
           protocol: TCP
-          port: 3000
+          port: 80
           targetPort: 80

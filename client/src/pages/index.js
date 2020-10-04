@@ -6,7 +6,7 @@ import Headline from '../components/Headline/Headline'
 import SectionHeader from '../components/Common/SectionHeader'
 import LinkPill from '../components/Common/LinkPill'
 import buildClient from '../../api/build-client'
-
+import axios from 'axios'
 
 const Home = (props) => {
 

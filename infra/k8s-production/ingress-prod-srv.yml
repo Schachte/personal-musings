@@ -5,6 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/configuration-snippet: proxy_set_header X-Script-Name /db;
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
     nginx.ingress.kubernetes.io/use-regex: "true"
     cert-manager.io/cluster-issuer: "letsencrypt-prod-secret"
 spec:
@@ -14,33 +15,18 @@ spec:
         - www.dev.ryan-schachte.com
       secretName: dev-schachte
   rules:
-    - host: dev.ryan-schachte.com
-      http:
-        paths:
-          - path: /db
-            backend:
-              serviceName: pgadmin
-              servicePort: 3000
-          - path: /posts
-            backend:
-              serviceName: posts-srv
-              servicePort: 5000
-          - path: /
-            backend:
-              serviceName: client-srv
-              servicePort: 4000
     - host: www.dev.ryan-schachte.com
       http:
         paths:
           - path: /db
             backend:
               serviceName: pgadmin
-              servicePort: 3000
+              servicePort: 80
           - path: /posts
             backend:
               serviceName: posts-srv
-              servicePort: 5000
+              servicePort: 80
           - path: /
             backend:
               serviceName: client-srv
-              servicePort: 4000
+              servicePort: 80
