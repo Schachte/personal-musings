@@ -1,7 +1,5 @@
 function LinkPill(props) {
-  return (
-        <span className="blog-link">{props.pillTitle}</span>
-    );
+    return <span className="blog-link">{props.pillTitle}</span>
 }
 
-export default LinkPill;
+export default LinkPill
