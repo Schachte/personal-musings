@@ -5,15 +5,16 @@ import ProjectsContainer from '../components/Projects/ProjectsContainer'
 import Headline from '../components/Headline/Headline'
 import SectionHeader from '../components/Common/SectionHeader'
 import LinkPill from '../components/Common/LinkPill'
-import React from 'react'
+import buildClient from '../../api/build-client'
 
-export default class Home extends React.Component {
-  componentDidMount() {
-    let app = document.getElementsByTagName("BODY")[0];
-    app.setAttribute("data-theme", localStorage.schachteTheme || 'light');
-  }
+import React, { useState, useEffect } from 'react'
 
-  render() {
+const Home = (props) => {
+    useEffect(() => {
+      let app = document.getElementsByTagName("BODY")[0];
+      app.setAttribute("data-theme", localStorage.schachteTheme || 'light');
+    })
+
     return (
       <div>
           <Headline />
@@ -28,5 +29,12 @@ export default class Home extends React.Component {
           <ProjectsContainer />
       </div>
     );
-  }
 }
+
+Home.getInitialProps = async (context) => {
+    const { data } = await buildClient(context).get('/posts')
+    console.log(data)
+    return data
+}
+
+export default Home;
