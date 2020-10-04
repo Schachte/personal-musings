@@ -24,13 +24,13 @@ spec:
             - name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
-                  name: pgusername
-                  key: pguser
+                  name: databaseuser
+                  key: undb
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: pgpassword
-                  key: pgpass
+                  name: pwdb
+                  key: pwdb
             - name: POSTGRES_DB
               valueFrom:
                 secretKeyRef:
