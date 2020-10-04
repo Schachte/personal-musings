@@ -7,6 +7,7 @@ import SectionHeader from '../components/Common/SectionHeader'
 import LinkPill from '../components/Common/LinkPill'
 import buildClient from '../../api/build-client'
 
+
 const Home = (props) => {
 
     return (
@@ -27,6 +28,7 @@ const Home = (props) => {
 
 Home.getInitialProps = async (context) => {
     const { data } = await buildClient(context).get('/posts')
+
     return {}
 }
 

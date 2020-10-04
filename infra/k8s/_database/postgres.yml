@@ -16,54 +16,30 @@ spec:
         - name: postgres
           image: postgres:latest
           imagePullPolicy: "IfNotPresent"
-          envFrom:
-            - configMapRef:
-                name: postgres-config
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               subPath: postgres
               name: postgresdb
+          env:
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: pgusername
+                  key: pguser
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: pgpass
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: pgdatabase
+                  key: pgdb
       volumes:
         - name: postgresdb
           persistentVolumeClaim:
             claimName: database-persistent-volume-claims
----
-kind: PersistentVolume
-apiVersion: v1
-metadata:
-  name: postgres-pv-volume
-  labels:
-    app: postgres
-spec:
-  capacity:
-    storage: 1Gi
-  accessModes:
-    - ReadWriteMany
-  hostPath:
-    path: "/mnt/data"
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: database-persistent-volume-claims
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 5Gi
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: postgres-config
-  labels:
-    app: postgres
-data:
-  POSTGRES_DB: schachte-blog
-  POSTGRES_USER: schachte
-  POSTGRES_PASSWORD: password
----
 apiVersion: v1
 kind: Service
 metadata:
