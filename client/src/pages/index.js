@@ -7,13 +7,9 @@ import SectionHeader from '../components/Common/SectionHeader'
 import LinkPill from '../components/Common/LinkPill'
 import buildClient from '../../api/build-client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 const Home = (props) => {
-    useEffect(() => {
-      let app = document.getElementsByTagName("BODY")[0];
-      app.setAttribute("data-theme", localStorage.schachteTheme || 'light');
-    })
 
     return (
       <div>
@@ -33,7 +29,6 @@ const Home = (props) => {
 
 Home.getInitialProps = async (context) => {
     const { data } = await buildClient(context).get('/posts')
-    console.log(data)
     return data
 }
 

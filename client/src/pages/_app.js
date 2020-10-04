@@ -1,6 +1,6 @@
 import '../styles/themes/theme.css'
 import '../App.css'
-import buildClient from '../../api/build-client'
+import { useEffect } from 'react'
 
 import Navigation from '../components/Navigation/Navigation'
 import Footer from '../components/Footer/Footer'
@@ -14,6 +14,11 @@ function RootWrapper({children}) {
 }
 
 const App = ({ Component, pageProps }) => {
+    useEffect(() => {
+      let app = document.getElementsByTagName("BODY")[0];
+      app.setAttribute("data-theme", localStorage.schachteTheme || 'light');
+    })
+
     return (
         <div>
             <Navigation/>
