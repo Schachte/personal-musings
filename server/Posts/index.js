@@ -13,26 +13,7 @@ var PORT = process.env.port || 4000
 const posts = {};
 
 app.get('/posts', (req, res) => {
-  const client = new Client({
-    user: 'schachte',
-    host: 'postgres',
-    database: 'schachte-blog',
-    password: 'password',
-    port: 5432,
-  });
-
-  client.connect();
-
-  const query = `
-        CREATE table testesjeogeiog(
-            email varchar,
-            firstName varchar,
-            lastName varchar,
-            age int
-        );
-    `;
-
-  return {}
+  res.status(200).send(posts)
 });
 
 app.post('/posts/create', async (req, res) => {
