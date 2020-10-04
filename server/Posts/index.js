@@ -11,12 +11,9 @@ app.use(cors());
 var PORT = process.env.port || 4000
 const posts = {};
 
-app.get('/', (req, res) => {
-  res.send({'PORT IS x: ': PORT});
-});
-
+// TODO: Hook up communication to postgresql here
 app.get('/posts', (req, res) => {
-  res.send({'PORT IS x: ': PORT});
+  res.send({'data': PORT + 400});
 });
 
 app.post('/posts/create', async (req, res) => {

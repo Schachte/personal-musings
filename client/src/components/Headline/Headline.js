@@ -1,10 +1,7 @@
 import React from 'react';
 import "./welcome.module.css" 
 
-const Photo = () => {
-  return <img src="/images/compressed-profile.png" alt="my image" />
-}
-function Headline() {
+const Headline = () => {
   return (
         <section className='headliner-container'>
           <div className={'main-headline'}>
@@ -23,7 +20,7 @@ function Headline() {
           </div>
           <div className={"image-headline"}>
             <div className={"image-offset"}></div>
-            {<Photo/>}
+            <img src="/images/compressed-profile.png" alt="my image" />
           </div>
         </section>
     );
