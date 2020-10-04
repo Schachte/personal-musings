@@ -32,10 +32,7 @@ spec:
                   name: pwdb
                   key: pwdb
             - name: POSTGRES_DB
-              valueFrom:
-                secretKeyRef:
-                  name: pgdatabase
-                  key: pgdb
+              value: "personalblog"
       volumes:
         - name: postgresdbstorage
           persistentVolumeClaim:
