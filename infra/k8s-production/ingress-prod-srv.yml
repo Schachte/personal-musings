@@ -24,7 +24,7 @@ spec:
           - path: /posts/*
             backend:
               serviceName: posts-srv
-              servicePort: 500
+              servicePort: 5000
           - path: /
             backend:
               serviceName: client-srv
@@ -40,7 +40,7 @@ spec:
           - path: /posts/*
             backend:
               serviceName: posts-srv
-              servicePort: 500
+              servicePort: 5000
           - path: /
             backend:
               serviceName: client-srv
