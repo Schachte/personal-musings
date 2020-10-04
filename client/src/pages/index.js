@@ -26,9 +26,7 @@ const Home = (props) => {
 }
 
 Home.getInitialProps = async (context) => {
-    // const { data } = await buildClient(context).get('/posts')
-    // console.log('round 2')
-    // console.log(data)
+    const { data } = await buildClient(context).get('/posts')
     return {}
 }
 

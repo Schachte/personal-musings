@@ -1,5 +1,6 @@
 FROM node:alpine
  
+ENV hostName=https://dev.ryan-schachte.com
 ENV CI=true
  
 WORKDIR /app

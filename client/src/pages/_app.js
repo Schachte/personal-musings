@@ -19,7 +19,6 @@ const App = ({ Component, pageProps }) => {
       app.setAttribute("data-theme", localStorage.schachteTheme || 'light');
       let bodySelector = document.querySelector('body').classList;
       bodySelector.remove('preload')
-      console.log(bodySelector)
     })
 
     return (
