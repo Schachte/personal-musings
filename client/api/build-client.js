@@ -1,12 +1,9 @@
 import axios from 'axios'
 
-/**
- * Enable pod-to-pod communication in Kubernetes via ingress controller 
- */
 const buildClient = ({ req }) => {
     if (typeof window === 'undefined') {
         return axios.create({
-            baseURL: 'https://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
+            baseURL: 'https://dev.ryan-schachte.com',
             headers: req.headers
         })
     } 

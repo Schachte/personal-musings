@@ -7,8 +7,6 @@ import SectionHeader from '../components/Common/SectionHeader'
 import LinkPill from '../components/Common/LinkPill'
 import buildClient from '../../api/build-client'
 
-import React, { useEffect } from 'react'
-
 const Home = (props) => {
 
     return (
@@ -28,9 +26,10 @@ const Home = (props) => {
 }
 
 Home.getInitialProps = async (context) => {
-    const { data } = await buildClient(context).get('/posts')
-    console.log(data)
-    return data
+    // const { data } = await buildClient(context).get('/posts')
+    // console.log('round 2')
+    // console.log(data)
+    return {}
 }
 
 export default Home;
