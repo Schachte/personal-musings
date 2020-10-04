@@ -27,5 +27,5 @@ spec:
     ports:
         - name: comments
           protocol: TCP
-          port: 4001
+          port: 80
           targetPort: 4001

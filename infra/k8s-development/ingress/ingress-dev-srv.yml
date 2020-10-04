@@ -16,12 +16,12 @@ spec:
           - path: /db
             backend:
               serviceName: pgadmin
-              servicePort: 3000
-          - path: /posts/*
+              servicePort: 80
+          - path: /posts
             backend:
               serviceName: posts-srv
-              servicePort: 5000
+              servicePort: 80
           - path: /
             backend:
               serviceName: client-srv
-              servicePort: 4000
+              servicePort: 80
