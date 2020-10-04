@@ -1,6 +1,6 @@
-# dev docker file for use in Skaffold 
 FROM node:alpine
  
+ENV hostName=http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
 ENV CI=true
  
 WORKDIR /app
