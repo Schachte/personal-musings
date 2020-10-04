@@ -19,7 +19,7 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               subPath: postgres
-              name: postgresdb
+              name: postgresdbstorage
           env:
             - name: POSTGRES_USER
               valueFrom:
@@ -37,9 +37,10 @@ spec:
                   name: pgdatabase
                   key: pgdb
       volumes:
-        - name: postgresdb
+        - name: postgresdbstorage
           persistentVolumeClaim:
-            claimName: database-persistent-volume-claims
+            claimName: database-persistent-volume-claims-cfg
+---
 apiVersion: v1
 kind: Service
 metadata:
