@@ -9,26 +9,25 @@ import buildClient from '../../api/build-client'
 import axios from 'axios'
 
 const Home = (props) => {
-
     return (
-      <div>
-          <Headline />
-          <BlogContainer>
-              <SectionHeader sectionHeader={"Latest Musings"}>
-                  <LinkPill pillTitle={"Posts"}/>
-                  <LinkPill pillTitle={"Articles"}/>
-                  <LinkPill pillTitle={"Videos"}/>
-              </SectionHeader>
-              <PostContainer/>
-          </BlogContainer>
-          <ProjectsContainer />
-      </div>
-    );
+        <div>
+            <Headline />
+            <BlogContainer>
+                <SectionHeader sectionHeader={'Latest Musings'}>
+                    <LinkPill pillTitle={'Posts'} />
+                    <LinkPill pillTitle={'Articles'} />
+                    <LinkPill pillTitle={'Videos'} />
+                </SectionHeader>
+                <PostContainer />
+            </BlogContainer>
+            <ProjectsContainer />
+        </div>
+    )
 }
 
 Home.getInitialProps = async (context) => {
-    const { data } = await buildClient(context).get('/posts')
+    const {data} = await buildClient(context).get('/posts')
     return {}
 }
 
-export default Home;
+export default Home

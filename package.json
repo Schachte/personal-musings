@@ -1,0 +1,32 @@
+{
+    "name": "react-personal-musings",
+    "version": "1.0.0",
+    "description": "<div align=\"center\"><h2>Ryan Schachte's Blog</h2></div>",
+    "main": "index.js",
+    "dependencies": {
+        "next": "^9.5.3",
+        "pg": "^8.3.3",
+        "pg-promise": "^10.6.2"
+    },
+    "devDependencies": {
+        "husky": "^4.3.0",
+        "prettier": "2.1.2",
+        "pretty-quick": "^3.0.2"
+    },
+    "scripts": {
+        "precommit": "pretty-quick --staged",
+        "postcommit": "git update-index -g",
+        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Schachte/personal-musings.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Schachte/personal-musings/issues"
+    },
+    "homepage": "https://github.com/Schachte/personal-musings#readme"
+}
