@@ -12,7 +12,7 @@ app.use(cors())
 var PORT = process.env.port || 4000
 const posts = {}
 
-const { dbuser, dbpassword, database } = process.env
+const {dbuser, dbpassword, database} = process.env
 
 const pool = new Pool({
     user: dbuser,
