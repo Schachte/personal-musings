@@ -38,6 +38,13 @@ spec:
         - name: pgadminstorage
           persistentVolumeClaim:
             claimName: pgadmin-persistent-volume-claims-cfg
+      initContainers:
+        - name: pgadmin-data-permission-fix
+          image: busybox
+          command: ["/bin/chmod","-R","777", "/var/lib/pgadmin"]
+          volumeMounts:
+          - name: pgadminstorage
+            mountPath: /var/lib/pgadmin
 ---
 apiVersion: v1
 kind: Service
