@@ -15,6 +15,9 @@ spec:
       containers:
         - name: pgadmin4
           image: dpage/pgadmin4
+          volumeMounts:
+            - mountPath: /var/lib/pgadmin
+              name: pgadminstorage
           env:
            - name: PGADMIN_DEFAULT_EMAIL
              valueFrom:
@@ -31,6 +34,10 @@ spec:
           ports:
             - containerPort: 80
               name: pgadminport
+      volumes:
+        - name: pgadminstorage
+          persistentVolumeClaim:
+            claimName: pgadmin-persistent-volume-claims-cfg
 ---
 apiVersion: v1
 kind: Service
