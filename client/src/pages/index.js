@@ -6,7 +6,9 @@ import Headline from '../components/Headline/Headline'
 import SectionHeader from '../components/Common/SectionHeader'
 import LinkPill from '../components/Common/LinkPill'
 import buildClient from '../../api/build-client'
-import axios from 'axios'
+
+// Limit max number of blog posts to show on homepage
+const maxLimit = 4
 
 const Home = (props) => {
     return (
@@ -18,7 +20,7 @@ const Home = (props) => {
                     <LinkPill pillTitle={'Articles'} />
                     <LinkPill pillTitle={'Videos'} />
                 </SectionHeader>
-                <PostContainer />
+                <PostContainer posts={props.posts} />
             </BlogContainer>
             <ProjectsContainer />
         </div>
@@ -26,8 +28,8 @@ const Home = (props) => {
 }
 
 Home.getInitialProps = async (context) => {
-    const {data} = await buildClient(context).get('/posts')
-    return {}
+    const { data } = await buildClient(context).get(`/posts/${maxLimit}`)
+    return { posts: data }
 }
 
 export default Home
