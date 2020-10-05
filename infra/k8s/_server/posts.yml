@@ -4,23 +4,36 @@ metadata:
     name: posts-depl
 spec:
     replicas: 1
-    selector: 
+    selector:
         matchLabels:
             app: posts
     template:
         metadata:
             labels:
                 app: posts
-        spec: 
-            containers: 
+        spec:
+            containers:
                 - name: posts
                   image: schachte1/posts
+                  env:
+                    - name: dbuser
+                      valueFrom: 
+                        secretKeyRef:
+                            name: databaseuser
+                            key: undb
+                    - name: dbpassword
+                      valueFrom: 
+                        secretKeyRef:
+                            name: pwdb
+                            key: pwdb
+                    - name: database
+                      value: "personalblog"
 ---
 apiVersion: v1
 kind: Service
 metadata:
     name: posts-srv
-spec: 
+spec:
     selector:
         app: posts
     type: ClusterIP
