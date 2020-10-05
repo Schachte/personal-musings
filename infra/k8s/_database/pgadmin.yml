@@ -41,7 +41,7 @@ spec:
       initContainers:
         - name: pgadmin-data-permission-fix
           image: busybox
-          command: ["/bin/chmod","-R","777", "/var/lib/pgadmin"]
+          command: ["/bin/chown", "-R", "5050:5050", "/var/lib/pgadmin"]
           volumeMounts:
           - name: pgadminstorage
             mountPath: /var/lib/pgadmin
