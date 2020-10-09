@@ -1,17 +1,17 @@
 import React from 'react'
-import ProjectsContainer from '../Projects/ProjectsContainer';
-const showdown = require('showdown');
+import ProjectsContainer from '../Projects/ProjectsContainer'
+const showdown = require('showdown')
 const Parser = require('html-react-parser')
 
 const classReplace = {
     type: 'output',
     regex: new RegExp(`\<([^\si]+).*\>\\[\.(.*)\\]`, 'g'),
-    replace: `<$1 class="$2">`
+    replace: `<$1 class="$2">`,
 }
 
 const converter = new showdown.Converter({
-    extensions: [classReplace]
-});
+    extensions: [classReplace],
+})
 
 const text = `
 ##[.post-section-title] What is an index?
@@ -33,7 +33,7 @@ test
 
 > This is another cool block test!
 
-`;
+`
 
 function PostContainer(props) {
     return (
@@ -60,7 +60,7 @@ function PostContainer(props) {
                 <div className="post-section">
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: converter.makeHtml(text)
+                            __html: converter.makeHtml(text),
                         }}></div>
                 </div>
             </div>

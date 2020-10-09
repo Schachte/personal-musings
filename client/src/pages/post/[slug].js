@@ -1,10 +1,10 @@
 import React from 'react'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 import PostContainer from '../../components/Post/PostContainer'
 
 const Post = (props) => {
     const router = useRouter()
-    const { slug } = router.query
+    const {slug} = router.query
 
     return (
         <div>
