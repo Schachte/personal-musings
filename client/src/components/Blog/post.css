@@ -1,176 +1,175 @@
 .blog-title-container {
-  width: 95%;
-  display: flex;
-  color: var(--main-font-color);
-  font-weight: 600;
-  text-align: center;
-  padding-bottom: 10px;
-  align-self: center;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
+    width: 95%;
+    display: flex;
+    color: var(--main-font-color);
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 10px;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .blog-title-container:after {
-  content: "";
-  display: block;
-  height: 10px;
-  width: 30%;
-  margin: 0px auto;
-  border-bottom: 1px solid var(--card-container-border);
-  opacity: 0.5;
+    content: '';
+    display: block;
+    height: 10px;
+    width: 30%;
+    margin: 0px auto;
+    border-bottom: 1px solid var(--card-container-border);
+    opacity: 0.5;
 }
 
 .blog-title-main {
-  font-family: "Playfair Display";
-  font-size: 2.5em;
-  font-weight: 600;
-  padding-top: 20px;
+    font-family: 'Playfair Display';
+    font-size: 2.5em;
+    font-weight: 600;
+    padding-top: 20px;
 }
 
 .post-tags {
-  /* fix for blog posts */
-  font-family: "Inter";
-  display: flex;
-  width: 100%;
-  padding-bottom: 20px;
+    /* fix for blog posts */
+    font-family: 'Inter';
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 .blog-post-tags {
-  justify-content: center;
+    justify-content: center;
 }
 
 .heading-metacontent {
-  width: 100%;
-  text-align: center;
-  padding-bottom: 40px;
-  padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 20px;
 }
 
 #title-sep {
-  padding: 0px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 .blog-post-heading span {
-  font-family: "Inter";
+    font-family: 'Inter';
 }
 
 .blog-post-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  padding-bottom: 20px;
-  flex-direction: column;
-  color: var(--main-font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    color: var(--main-font-color);
 }
 
 .blog-post-heading img {
-  width: 60%;
-  -webkit-box-shadow: -1px 0px 59px -14px rgba(0, 0, 0, 0.44);
-  -moz-box-shadow: -1px 0px 59px -14px rgba(0, 0, 0, 0.44);
-  box-shadow: -1px 0px 59px -14px rgba(0, 0, 0, 0.44);
+    width: 60%;
+    -webkit-box-shadow: -1px 0px 59px -14px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: -1px 0px 59px -14px rgba(0, 0, 0, 0.44);
+    box-shadow: -1px 0px 59px -14px rgba(0, 0, 0, 0.44);
 }
 
 .post-container {
-  width: 100%;
-  padding: 20px;
+    width: 100%;
+    padding: 20px;
 }
 
 /**
 Post Related Styling
 */
 .post-section {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .post-section p {
-  line-height: 2.5em;
-  font-family: "Inter";
-  color: var(--main-font-color);
+    line-height: 2.5em;
+    font-family: 'Inter';
+    color: var(--main-font-color);
 }
 
 .post-section:first-child {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .post-section:not(:first-child) {
-  margin-top: 75px;
+    margin-top: 75px;
+}
+
+.post-section-title:not(:first-child) {
+    margin-top: 75px;
 }
 
 .post-section-title {
-  padding: 50px;
+    padding: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    color: var(--main-font-color);
 }
 
 .post-section h2.post-section-title {
-  padding: 0px 0px 50px 0px;
-  font-family: "Playfair Display";
-  font: 2em "Playfair Display", sans-serif;
-  font-weight: 600;
-  color: var(--main-font-color);
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  margin-top: 50px;
+    padding: 0px 10px 50px 0px;
+    font: 2em 'Playfair Display', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-.post-section h2.post-section-title:before {
-  border-top: 1px solid #cad1d3;
-  content: "";
-  margin: 0 auto;
-  position: absolute;
-  top: 30%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-h2.post-section-title span {
-  background: var(--background-color);
-  padding: 0 35px;
+.post-section-title:before,
+.post-section-title:after {
+    content: '';
+    border-top: 2px solid var(--main-font-color);
+    margin: 0 5px 0 5px;
+    padding: 0 15px 0 15px;
+    flex: 1 0 10%;
 }
 
 .emphasize-quote {
-  font-family: "Playfair Display" !important;
-  font-size: 1.6em !important;
-  text-align: center;
-  font-style: italic;
-  font-weight: 500;
-  color: var(--main-font-color);
+    font-family: 'Playfair Display' !important;
+    font-size: 1.6em !important;
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--main-font-color);
 }
 
 .emphasize-quote:after {
-  content: "";
-  display: block;
-  height: 30px;
-  width: 30%;
-  margin: 0px auto;
-  border-bottom: 3px solid var(--main-accent-color);
+    content: '';
+    display: block;
+    height: 10px;
+    width: 30%;
+    margin: 0px auto;
+    border-bottom: 5px solid var(--main-accent-color);
 }
 
 blockquote {
-  background: var(--nav-background);
-  border-left: 10px solid var(--main-accent-color);
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+    background: var(--nav-background);
+    border-left: 10px solid var(--main-accent-color);
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: '\201C''\201D''\2018''\2019';
 }
 
 blockquote > p {
-  font-family: "Playfair Display" !important;
-  font-size: 1.5em !important;
-  display: inline;
-  color: var(--main-font-color);
+    font-family: 'Playfair Display' !important;
+    font-size: 1.5em !important;
+    display: inline;
+    color: var(--main-font-color);
 }
 
 blockquote:before {
-  color: var(--main-font-color);
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+    color: var(--main-font-color);
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
 }

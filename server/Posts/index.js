@@ -26,6 +26,7 @@ app.get('/posts/:limit?', (req, res) => {
     const limit = req.params.limit || Number.MAX_SAFE_INTEGER
     pool.query(`SELECT * FROM posts ORDER BY id DESC LIMIT ${limit}`, (error, results) => {
         if (error) {
+            console.log(error)
             res.send(500).json({error: 'bad query'})
         }
         res.status(200).json(results.rows)

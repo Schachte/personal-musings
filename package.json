@@ -4,6 +4,7 @@
     "description": "<div align=\"center\"><h2>Ryan Schachte's Blog</h2></div>",
     "main": "index.js",
     "dependencies": {
+        "html-react-parser": "^0.14.0",
         "next": "^9.5.3",
         "pg": "^8.3.3",
         "pg-promise": "^10.6.2"
