@@ -1,4 +1,39 @@
 import React from 'react'
+import ProjectsContainer from '../Projects/ProjectsContainer'
+const showdown = require('showdown')
+const Parser = require('html-react-parser')
+
+const classReplace = {
+    type: 'output',
+    regex: new RegExp(`\<([^\si]+).*\>\\[\.(.*)\\]`, 'g'),
+    replace: `<$1 class="$2">`,
+}
+
+const converter = new showdown.Converter({
+    extensions: [classReplace],
+})
+
+const text = `
+##[.post-section-title] What is an index?
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quam
+temporibus, similique optio saepe mollitia dolor ipsam totam
+impedit, vero autem libero et magni ullam cumque! Vero, dignissimos
+minus? Earum porro totam consectetur recusandae non deleniti
+necessitatibus illum asperiores dignissimos sunt incidunt rem harum
+soluta sapiente.
+
+> Fuck with the cheese, get the wheel
+
+[.emphasize-quote]this is a test!
+
+##[.post-section-title] How can we uwefwefwefwefnderstand?
+
+test
+
+> This is another cool block test!
+
+`
 
 function PostContainer(props) {
     return (
@@ -10,7 +45,7 @@ function PostContainer(props) {
                     <span className="tag post-tag-orange">Java</span>
                     <span className="tag post-tag-red">Databases</span>
                 </div>
-                <span className="blog-title-main">{props.title}</span>
+                <span className="blog-title-main">{props.slugName}</span>
             </div>
 
             <div className="blog-post-heading">
@@ -23,21 +58,10 @@ function PostContainer(props) {
 
             <div className="post-container">
                 <div className="post-section">
-                    <h2 className="post-section-title" id="whatisanindex">
-                        <span>What Is An Index?</span>
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quam temporibus, similique optio
-                        saepe mollitia dolor ipsam totam impedit, vero autem libero et magni ullam cumque! Vero,
-                        dignissimos minus? Earum porro totam consectetur recusandae non deleniti necessitatibus illum
-                        asperiores dignissimos sunt incidunt rem harum soluta sapiente.
-                    </p>
-                    <blockquote>
-                        <p>Fuck with the cheese, get the wheel</p>
-                    </blockquote>
-                    <p>
-                        <div className="emphasize-quote">This is an emphasized quote!</div>
-                    </p>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: converter.makeHtml(text),
+                        }}></div>
                 </div>
             </div>
         </div>

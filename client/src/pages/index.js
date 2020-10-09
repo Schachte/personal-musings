@@ -28,8 +28,8 @@ const Home = (props) => {
 }
 
 Home.getInitialProps = async (context) => {
-    const {data} = await buildClient(context).get(`/posts/${maxLimit}`)
-    return {posts: data}
+    // const {data} = await buildClient(context).get(`/posts/${maxLimit}`)
+    return {posts: []}
 }
 
 export default Home
